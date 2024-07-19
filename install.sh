@@ -5,6 +5,6 @@
 
 echo "attention it will replace the original"
 
-mv ./bashrc ~/.bashrc
+cp ./bashrc ~/.bashrc
 
 echo "done, please reload the shell"
