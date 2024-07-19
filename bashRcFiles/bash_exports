@@ -1,0 +1,24 @@
+#default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+export LESS='-R'
+
+
+# echo "PATH before -> $PATH"
+# this will import local scripts as esecutable in the path see:
+# https://github.com/ciberkids/bash-commands
+# check out the repository inside there
+
+while IFS= read -r dir
+do
+    PATH="$dir:$PATH"
+done < <(find $HOME/usr/local/bin -type d  -not -name '.git' -not -path '*/.git/*')
+
+#PATH="$PATH:$HOME/go/bin"
+
+#echo "exporting ->> $PATH"
+export PATH
+
+export LIBVIRT_DEFAULT_URI=qemu:///system
+
+export PS1="\033[1m\033[31m\u\033[37m@\033[32m\h:\033[33m\w\033[0m\n \$ "

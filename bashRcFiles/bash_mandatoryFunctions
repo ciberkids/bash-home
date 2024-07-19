@@ -1,0 +1,4 @@
+function sourceIfExist() {
+   [ -e $1 ] && source $1
+}
+
