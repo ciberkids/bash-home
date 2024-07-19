@@ -4,10 +4,18 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+# Load global settings
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+if [ -f  /etc/bash.bashrc ]; then
+	. /etc/bash.bashrc
+fi
+
+
 archey
-#alias ls='ls --color=auto'
-#alias ll='ls -lah --color=auto'
-### needed function here 
 
 dir_for_bash-home="~/git/bash-home"
 
