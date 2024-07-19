@@ -15,8 +15,8 @@ do
 done < <(find $HOME/usr/local/bin -type d  -not -name '.git' -not -path '*/.git/*')
 
 #PATH="$PATH:$HOME/go/bin"
-
-#echo "exporting ->> $PATH"
+PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+echo "exporting ->> $PATH"
 export PATH
 
 export LIBVIRT_DEFAULT_URI=qemu:///system

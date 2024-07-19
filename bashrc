@@ -15,20 +15,18 @@ if [ -f  /etc/bash.bashrc ]; then
 fi
 
 
-archey
-
-dir_for_bash_home="$HOME/git/bash-home"
+dir_for_bash_home="$HOME/git/bash-home/bashRcFiles"
 
 #####
 #PS1='[\u@\h \W]\$ '
 #load functions 
-[ -e ${dir_for_bash_home}/bashRcFiles/bash_mandatoryFunctions ] && source ${dir_for_bash_home}/bashRcFiles/bash_mandatoryFunctions
+[ -e ${dir_for_bash_home}/bash_mandatoryFunctions ] && source ${dir_for_bash_home}/bash_mandatoryFunctions
 
 
 if type "sourceIfExist" > /dev/null 2>&1; then
 
   # load all functions  
-  for file in ${dir_for_bash_home}/bashRcFiles/bash_functions_to_import/* 
+  for file in ${dir_for_bash_home}/bash_functions_to_import/* 
   do
     sourceIfExist ${file}
   done
@@ -63,7 +61,8 @@ if type "sourceIfExist" > /dev/null 2>&1; then
   # Impostazione del titolo in base al comando eseguito
   sourceIfExist ~/.bash_preexec
   preexec_functions+=(dynamicTerminalTitle startTimer)
-
+  
+  archey
 else
   echo "Cannot source Files!!! aborting enhancement!"
 fi

@@ -1,4 +1,11 @@
 function sourceIfExist() {
+   if [ $2 ]; then 
+     if [ -e $1 ]; then
+       echo "$1 exist!!! sourcing"
+     else
+       echo "$1 doesn't exist :("
+     fi
+   fi
    [ -e $1 ] && source $1
 }
 
