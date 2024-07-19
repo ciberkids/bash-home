@@ -8,6 +8,10 @@ export LESS='-R'
 # this will import local scripts as esecutable in the path see:
 # https://github.com/ciberkids/bash-commands
 # check out the repository inside there
+if [ ! -d $HOME/usr/local/bin ]; then
+  echo are you using: https://github.com/ciberkids/bash-commands  ?
+fi
+
 
 while IFS= read -r dir
 do
