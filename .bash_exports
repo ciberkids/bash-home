@@ -1,0 +1,18 @@
+#default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+
+#echo "PATH before -> $PATH"
+
+while IFS= read -r dir
+do
+    PATH="$dir:$PATH"
+done < <(find $HOME/usr/local/bin -type d  -not -name '.git' -not -path '*/.git/*')
+
+#PATH="$PATH:$HOME/go/bin"
+
+#echo "exporting ->> $PATH"
+export PATH
+
+
