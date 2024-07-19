@@ -17,31 +17,31 @@ fi
 
 archey
 
-dir_for_bash-home="$HOME/git/bash-home"
+dir_for_bash_home="$HOME/git/bash-home"
 
 #####
 #PS1='[\u@\h \W]\$ '
 #load functions 
-for file in ${dir_for_bash-home}/bashRcFiles/bash_functions_to_import
-[ -e ${dir_for_bash-home}/bashRcFiles/bash_mandatoryFunctions ] && source ${dir_for_bash-home}/bashRcFiles/bash_mandatoryFunctions
+for file in ${dir_for_bash_home}/bashRcFiles/bash_functions_to_import
+[ -e ${dir_for_bash_home}/bashRcFiles/bash_mandatoryFunctions ] && source ${dir_for_bash_home}/bashRcFiles/bash_mandatoryFunctions
 
 
 if type "sourceIfExist" > /dev/null 2>&1; then
 
   # load all functions  
-  for file in ${dir_for_bash-home}/bashRcFiles/bash_functions_to_import/* do
+  for file in ${dir_for_bash_home}/bashRcFiles/bash_functions_to_import/* do
     sourceIfExist ${file}
   done
 
   echo "The function 'sourceIfExist' exists."
   # load aliases
-  sourceIfExist ${dir_for_bash-home}/bash_aliases
+  sourceIfExist ${dir_for_bash_home}/bash_aliases
   
   # load exports
-  sourceIfExist ${dir_for_bash-home}/bash_exports
+  sourceIfExist ${dir_for_bash_home}/bash_exports
   
   # load shell options
-  sourceIfExist ${dir_for_bash-home}/bash_options
+  sourceIfExist ${dir_for_bash_home}/bash_options
 
 
   # Fortune cow!! - not at the end it could call: _echoReturnValue
@@ -52,13 +52,13 @@ if type "sourceIfExist" > /dev/null 2>&1; then
   fi
 
   # iload a specific file for the pc that i am using
-  sourceIfExist  ${dir_for_bash-home}/bash_specific
+  sourceIfExist  ${dir_for_bash_home}/bash_specific
 
   # Return value
   export PROMPT_COMMAND=promptCommand
 
   # Carica le variabili d'ambiente
-  sourceIfExist ${dir_for_bash-home}/bash_variables
+  sourceIfExist ${dir_for_bash_home}/bash_variables
 
   # Impostazione del titolo in base al comando eseguito
   sourceIfExist ~/.bash_preexec
