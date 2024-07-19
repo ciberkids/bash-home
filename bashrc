@@ -28,7 +28,8 @@ dir_for_bash_home="$HOME/git/bash-home"
 if type "sourceIfExist" > /dev/null 2>&1; then
 
   # load all functions  
-  for file in ${dir_for_bash_home}/bashRcFiles/bash_functions_to_import/* do
+  for file in ${dir_for_bash_home}/bashRcFiles/bash_functions_to_import/* 
+  do
     sourceIfExist ${file}
   done
 
