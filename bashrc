@@ -22,7 +22,6 @@ dir_for_bash_home="$HOME/git/bash-home"
 #####
 #PS1='[\u@\h \W]\$ '
 #load functions 
-for file in ${dir_for_bash_home}/bashRcFiles/bash_functions_to_import
 [ -e ${dir_for_bash_home}/bashRcFiles/bash_mandatoryFunctions ] && source ${dir_for_bash_home}/bashRcFiles/bash_mandatoryFunctions
 
 
