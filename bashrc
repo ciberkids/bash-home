@@ -17,7 +17,7 @@ fi
 
 archey
 
-dir_for_bash-home="~/git/bash-home"
+dir_for_bash-home="$HOME/git/bash-home"
 
 #####
 #PS1='[\u@\h \W]\$ '
